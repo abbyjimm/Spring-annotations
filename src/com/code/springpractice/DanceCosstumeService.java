@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -35,6 +38,18 @@ public class DanceCosstumeService implements CostumeService {
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	// Define my init method
+	@PostConstruct
+	public void myInitMethod() {
+		System.out.println(">> This is my init method");
+	}
+	
+	// Define my destroy method
+	@PreDestroy
+	public void myDestroyMethod() {
+		System.out.println(">> This is my destroy method");
 	}
 	
 	@Override

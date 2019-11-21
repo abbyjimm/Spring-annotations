@@ -6,10 +6,10 @@ public class MainAnnotationApp {
 
 	public static void main(String[] args) {
 		
-		//Read spring config file
+		// Read spring config file
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		//Get the bean from spring container
+		// Retrieve the bean from spring container
 		Dancer dancer = context.getBean("youngDancer", Dancer.class);
 		
 		//Call a method on the bean
